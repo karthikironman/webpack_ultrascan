@@ -1,0 +1,21 @@
+.namesBar{
+position:absolute;
+background-color: black;
+font-size: 18px;;
+padding:1.5rem;
+color:white;
+min-height:8rem;
+width:auto;
+top:40vh;
+right:44.2vw;
+}
+.names-bar-row{
+   
+}
+.names-bar-lebel{
+   
+   margin-right:10px;
+}
+.names-bar-value{
+  
+}

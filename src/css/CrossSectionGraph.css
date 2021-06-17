@@ -1,0 +1,343 @@
+.crossSectionTabs {
+  /* height: calc(100vh - 4rem); */
+  /* overflow: auto; */
+}
+.FilterCheckBox2D {
+  height: auto;
+  padding: 5px 10px 0px 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.637);
+  color: white;
+  font-size: 12px;
+  margin-left: 440px;
+  margin-top: -320px;
+}
+.FilterCheckBox3D {
+  height: auto;
+  padding: 5px 10px 0px 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.637);
+  color: white;
+  font-size: 12px;
+  margin-left: 440px;
+  margin-top: -335px;
+}
+.twistAngleCss {
+  position: absolute;
+  width: 82px;
+  margin-left: -140px;
+}
+.twistAngleCss3D {
+  position: absolute;
+  width: 82px;
+  margin-left: -140px;
+}
+.buttonOptionCss {
+  position: absolute;
+  width: 82px !important;
+  margin-left: -140px;
+  margin-top: 70px;
+}
+.buttonOptionCss3D {
+  position: absolute;
+  width: 82px !important;
+  margin-left: -140px;
+  margin-top: 70px;
+}
+.crossSectionButton {
+  width: 82px !important;
+}
+/* .twistAngleCss > input::-webkit-outer-spin-button,
+.twistAngleCss > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.twistAngleCss > input[type="number"] {
+  -moz-appearance: textfield;
+}
+.twistAngleCss3D > input::-webkit-outer-spin-button,
+.twistAngleCss3D > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.twistAngleCss3D > input[type="number"] {
+  -moz-appearance: textfield;
+} */
+.crossSectionTabs > .nav-tabs {
+  border: none !important;
+  margin-bottom: 0px !important;
+}
+.crossSectionTabs > .nav-tabs > a {
+  font-size: 1.1vw !important;
+  padding: 10px 15px 5px 25px !important;
+  border: none !important;
+  color: #ffffff !important;
+  opacity: 0.5;
+  background: rgb(255 255 255 / 10%) !important;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 50%) !important;
+}
+.crossSectionTabs > .nav-tabs > a:hover {
+  border: none !important;
+  color: #ffffff !important;
+  opacity: 0.5;
+  /* margin-bottom: 0px !important; */
+}
+.crossSectionTabs > .nav-tabs > .nav-link.active {
+  border: none !important;
+  color: #ffffff !important;
+  opacity: 1;
+  /* margin-bottom: 0px !important; */
+}
+.cardValueOdd {
+  border: none;
+  height: 13vh;
+  width: 100%;
+  background-color: #3f3f3f;
+  background: transparent
+    linear-gradient(
+      90deg,
+      #f7941d00 0%,
+      var(---ff991e_examplecolor) 22%,
+      var(---ff991e_examplecolor) 79%,
+      #ff991e00 100%
+    )
+    0% 0% no-repeat padding-box;
+  background: transparent
+    linear-gradient(
+      90deg,
+      #f7941d00 0%,
+      #ff991e 22%,
+      #ff991e 79%,
+      #ff991e00 100%
+    )
+    0% 0% no-repeat padding-box;
+  background-size: 100% 2px;
+  font-family: "Montserrat", sans-serif;
+}
+.cardValueEven {
+  border: none;
+  height: 13vh;
+  width: 100%;
+  background-color: #3f3f3f;
+  background: transparent
+    linear-gradient(
+      90deg,
+      #f7941d00 0%,
+      var(---ff991e_examplecolor) 22%,
+      var(---ff991e_examplecolor) 79%,
+      #ff991e00 100%
+    )
+    0% 0% no-repeat padding-box;
+  background: transparent
+    linear-gradient(
+      90deg,
+      #f7941d00 0%,
+      #1c6fb1 22%,
+      #1c6fb1 79%,
+      #ff991e00 100%
+    )
+    0% 0% no-repeat padding-box;
+  background-size: 100% 2px;
+  font-family: "Montserrat", sans-serif;
+}
+.crossSectionButtonHeading {
+  padding-top: 1vh;
+  font-weight: 400;
+  font-size: 13px;
+  color: white;
+  text-align: left;
+}
+.cardValueHeading {
+  padding-top: 1vh;
+  font-weight: 400;
+  font-size: 1vw;
+  color: white;
+}
+.cardValueText {
+  padding-top: 1.2vh;
+  font-weight: 400;
+  font-size: 1.4vw;
+  color: white;
+}
+.cardValueTextSub {
+  font-weight: 400;
+  font-size: 1.5vw;
+  color: white;
+}
+.buttonClassCss {
+  text-align: center;
+  cursor: pointer;
+  background-color: #545454;
+  color: white;
+  /* width: 80px; */
+  display: inline-block;
+  /* margin: 0rem 1rem; */
+  /* padding: 0.1rem 1rem; */
+  text-transform: capitalize;
+  font-size: 1.2vw;
+}
+.crossSection2dGraphRow {
+  margin-top: 2vh !important;
+}
+.crossSection2dGraphRowMax {
+  margin-top: 2vh !important;
+}
+.crossSection2dGraphlablesRatio {
+  padding: 2px 10px;
+  background: #2d2d2d;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 10px !important;
+}
+.minScreen {
+  display: flex;
+}
+.maxScreen {
+  display: none;
+}
+.crossSection3dGraphMargin {
+  margin-top: 15px;
+}
+.crossSection3dGraphMargin > canvas {
+  width: 400px !important;
+  height: 330px !important;
+}
+.FilterCheckBox2D > label > span > div {
+  height: 3.5vh !important;
+  width: 1.5vw !important;
+}
+.FilterCheckBox2D > label > span > div > div {
+  border-radius: 50% !important;
+  padding: 35% !important;
+}
+.FilterCheckBox3D > label > span > div {
+  height: 3.5vh !important;
+  width: 1.5vw !important;
+}
+.FilterCheckBox3D > label > span > div > div {
+  border-radius: 50% !important;
+  padding: 35% !important;
+}
+.imageCssClass {
+  width: 50%;
+}
+@media only screen and (min-width: 1440px) {
+  .imageCssClass {
+    width: 50%;
+  }
+  .FilterCheckBox2D {
+    height: auto;
+    padding: 5px 10px 0px 10px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.637);
+    color: white;
+    font-size: 2vh;
+    margin-left: 580px;
+    margin-top: -445px;
+  }
+  .FilterCheckBox3D {
+    height: auto;
+    padding: 5px 10px 0px 10px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.637);
+    color: white;
+    font-size: 2vh;
+    margin-left: 595px;
+    margin-top: -455px;
+  }
+  .twistAngleCss {
+    position: absolute;
+    width: 90px;
+    margin-top: -50px;
+    margin-left: -180px;
+  }
+  .twistAngleCss3D {
+    position: absolute;
+    width: 90px;
+    margin-top: -70px;
+    margin-left: -170px;
+  }
+  .buttonOptionCss {
+    position: absolute;
+    width: 90px !important;
+    margin-top: 20px;
+    margin-left: -180px;
+  }
+  .buttonOptionCss3D {
+    position: absolute;
+    width: 90px !important;
+    margin-top: 0px;
+    margin-left: -170px;
+  }
+  .crossSectionButtonHeading {
+    padding-top: 1vh;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    text-align: left;
+  }
+  .crossSectionButton {
+    width: 90px !important;
+  }
+  .crossSection3dGraphMargin > canvas {
+    width: 530px !important;
+    height: 470px !important;
+  }
+  .minScreen {
+    display: none;
+  }
+  .maxScreen {
+    display: flex;
+  }
+  .crossSection2dGraphlablesRatio {
+    font-size: 20px !important;
+  }
+  .crossSection3dGraphMargin {
+    margin-top: -52px;
+  }
+}
+@media only screen and (min-height: 630px) and (max-height: 900px) {
+  .crossSection2dGraphRow {
+    margin-top: 5vh !important;
+  }
+  .crossSection2dGraphRowMax {
+    margin-top: 6vh !important;
+  }
+}
+@media only screen and (min-height: 900px) and (max-height: 1400px) {
+  .crossSection2dGraphRow {
+    margin-top: 10vh !important;
+  }
+  .crossSection2dGraphRowMax {
+    margin-top: 8vh !important;
+  }
+}
+@media only screen and (min-height: 1400px) {
+  .crossSection2dGraphRow {
+    margin-top: 10vh !important;
+  }
+  .crossSection2dGraphRowMax {
+    margin-top: 12vh !important;
+  }
+}
+.toggleButton {
+  display: flex;
+  justify-content: center;
+}
+.toggleButton span {
+  position: absolute;
+  left: 30%;
+  margin-top: 0.4rem;
+}
+.toggleButton button {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  outline: none;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  background: black;
+  color: white;
+  margin-top: 0.7rem;
+  left: 40%;
+}

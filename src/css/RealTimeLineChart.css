@@ -1,0 +1,49 @@
+.line-chart {
+  height: 28vh;
+  /* this height should change in js file as well, for the smart position logic */
+  /* refer etDynamicHeight function in its js file*/
+  width: 99vw;
+  position: fixed;
+  bottom: 20px;
+  font-size: 10px;
+}
+#FilterBox {
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  background: rgba(0, 0, 0, 0.637);
+  width: auto;
+  color: white;
+  font-size: 2vh;
+}
+
+#FilterBox > label > span > div {
+  height: 3.5vh !important;
+  width: 1.5vw !important;
+}
+#FilterBox > label > span > div > div {
+  border-radius: 50% !important;
+  padding: 35% !important;
+}
+#FilterBox{
+    height: auto;
+    padding:10px;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.637);
+    width: auto;
+    color: white;
+    font-size: 12px;
+}
+#FilterBoxTransducer{
+    height: auto;
+    padding:10px;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.637);
+    width: auto;
+    color: white;
+    font-size: 12px;
+    top:-3.3rem;
+}

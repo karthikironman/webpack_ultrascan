@@ -1,0 +1,177 @@
+#container {
+  flex: auto;
+  flex-direction: row;
+  height: 6rem;
+  background-color: transparent;
+  font-family: Montserrat;
+}
+.navbar {
+  margin-bottom: 0px !important;
+}
+.spool_img {
+  width: 21px;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.dropdown-toggle {
+  margin: 3px 1rem 0 3px;
+  opacity: 0.5;
+  /* width:2rem; */
+}
+.dropdown-toggle:hover {
+  opacity: 1;
+}
+.logo {
+  width: 16rem;
+}
+.btn_text {
+  position: relative;
+  top: 0px;
+  margin-left: 5px;
+  font-size: 1vw;
+}
+.btn_icon {
+  position: relative;
+  bottom: 1px;
+}
+.cntrl_btns {
+  position: absolute;
+  left: 35%;
+  top: 0.65rem;
+}
+.right_btns {
+  position: absolute;
+  right: 5%;
+  top: 0.65rem;
+}
+.button2 {
+  padding: 7px 1.4rem !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+.dark_mode_btn_switch {
+  display: inline-block;
+  margin-left: 10px;
+}
+.dark_mode_btn_letter {
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  top: 2px;
+}
+.dark_mode_btn {
+  width: auto;
+  position: relative;
+  top: 0.8rem;
+  right: 3rem;
+}
+.theme-button,
+.theme-button:active,
+.theme-button:focus {
+  border-radius: 20px;
+  padding: 3px;
+  width: 9rem;
+  outline: none;
+  border: none;
+  margin-right: 1rem;
+}
+.menu-flags {
+  color: black;
+  right: 2rem;
+  outline: none;
+  margin-top: 15px;
+}
+.flag-select__option__label {
+  top: 6px;
+  width: 1rem;
+}
+.flag-select__options {
+  width: 8rem;
+  overflow-x: hidden;
+  max-height: 100rem !important;
+  left: 3rem;
+  padding: 0;
+}
+.flag-select__option__icon {
+  top: 0.2em;
+}
+.flag-select__btn:after {
+  border-top: 5px solid #c9c0c0;
+  position: relative;
+  right: 2rem;
+  top: -5px;
+}
+.com_logo {
+  height: 32px;
+  width: 65px;
+  margin-right: 10px;
+}
+.flag-select__btn {
+  color: rgba(255, 255, 255, 0.5);
+}
+.flag-select__btn:focus {
+  outline: none !important;
+}
+.flag-select__option.has-label {
+  padding: 0px 20px 13px 8px;
+  font-style: arial;
+}
+.flag-select__option--placeholder {
+  bottom: 9px;
+  position: relative;
+  width: 10rem;
+}
+.flag-select__option--placeholder:focus {
+  outline: none;
+}
+.navbar-navd {
+  position: relative !important;
+  left: 51vw !important;
+}
+.mr-auto .cntrl_btns {
+  position: relative !important;
+  left: 51vw !important;
+}
+.mr-auto .right_btns {
+  position: relative !important;
+  left: 51vw !important;
+}
+.left_btns {
+  height: 2.4rem;
+  margin-left: 50%;
+  margin-top: 9px;
+  padding: 7px 1.4rem !important;
+  border-radius: 0 !important;
+  border: 1px solid #635e5e !important;
+}
+.left_btns:hover {
+  background-color: black !important;
+}
+.simulatedInfo {
+  color: white;
+  position: relative;
+   right: 13.5vw; 
+  /* top: 8px; */
+  background-color: #1f1f1f;
+  padding: 0.3rem;
+  border-radius: 2px;
+  animation: mymove 1s infinite;
+  /* animation-iteration-count: 2; */
+  float: right;
+  margin-right: 5rem;
+  margin-top: 5px;
+}
+.simulatedInfo img {
+  width: 2.5rem;
+}
+@keyframes mymove {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: #1f1f1f;
+    -webkit-box-shadow: 3px 2px 25px 0px rgba(97, 91, 97, 1);
+    -moz-box-shadow: 3px 2px 25px 0px rgba(97, 91, 97, 1);
+    box-shadow: 3px 2px 25px 0px rgba(97, 91, 97, 1);
+  }
+}

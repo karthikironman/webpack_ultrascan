@@ -1,0 +1,29 @@
+#bottomButton{
+padding:0.8rem 2rem;
+cursor:pointer;
+position: relative;
+/* border-right: 1px solid white; */
+
+
+}
+#bottomButton:hover {
+    background-color: black;
+}
+#bottomButton img {
+    height:2.3rem;
+}
+.grey{
+    background-color: grey  !important;
+}
+.black{
+    background-color: black  !important;
+}
+#bottomButton .sideLine {
+width:0px;
+height:3rem;
+border-right:1px solid #dad7d7;
+position:absolute;
+right:0;
+top:50%;
+transform: translate(0,-50%);
+}

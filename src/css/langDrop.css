@@ -1,0 +1,55 @@
+.Langdrop {
+  /* padding-top:1rem; */
+  position: relative;
+  /* top: -15px; */
+  display: flex;
+  /* right: -25px; */
+  text-align: right;
+  float: right;
+}
+.date-time {
+  display: flex;
+  flex-direction: column;
+}
+.png_modify {
+  width: 3rem;
+  height: 2rem;
+  padding: 0.4rem 0.3rem;
+}
+.button_status {
+  padding: 10px 1rem !important;
+  border-radius: 0 !important;
+  border: none !important;
+  background-color: grey !important;
+  margin-left: 5px;
+}
+.button_status img {
+  width: 1.5rem;
+}
+.btn_text {
+  position: relative;
+  top: 0px;
+  margin-left: 5px;
+  font-size: 14px;
+}
+.invalid_data {
+  padding: 0.2rem 1rem;
+  position: relative;
+  outline: 1px dotted;
+  margin: 0;
+  background: red;
+  margin-left: 5px;
+  color: white !important;
+  font-weight: 500;
+}
+.spool_img {
+  width: 25px;
+}
+.red {
+  background-color: red !important;
+  padding: 10px 1rem !important;
+  border-radius: 0 !important;
+  border: none !important;
+  /* background-color: grey !important;  */
+  margin-left: 5px;
+}

@@ -1,0 +1,15 @@
+.pageOne{
+    margin:2rem;
+    outline:2px solid black;
+    padding:2rem;
+    background:black;
+}
+p{
+    color: white;
+    font-size: 30px;
+}
+.pageOneBtn{
+    padding:1rem;
+    font-size: 24px;
+    cursor: pointer;
+}
