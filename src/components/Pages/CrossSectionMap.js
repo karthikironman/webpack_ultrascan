@@ -38,7 +38,8 @@ class CrossSectionMap extends Component {
       checkBoxMap: Array(10).fill(true),
       isZoomCount: 0,
       isFlipOption: false,
-      twistAngleValue: 0,
+      twistAngleValue: null,
+      twistAngleValueTemp: 0,
       circleCXXY: [],
       tempCircleCXXY: [],
       tempCirclePositionArray: [],
@@ -91,12 +92,19 @@ class CrossSectionMap extends Component {
         };
       });
       average.forEach((element) => {
-        let x = parseInt(element.angle) + parseInt(this.state.twistAngleValue);
+        let x =
+          parseInt(element.angle) + parseInt(this.state.twistAngleValueTemp);
         let y = Math.round(x / 10) * 10;
         if (y > 355) {
           element.angle = parseInt(y) - 360;
+        } else if (y > -355 && y < 0) {
+          element.angle = parseInt(y) + 360;
         } else {
-          element.angle = parseInt(y);
+          if (y == -360) {
+            element.angle = parseInt(y) + 360;
+          } else {
+            element.angle = parseInt(y);
+          }
         }
       });
       this.setState({ lablesArray: average });
@@ -133,32 +141,43 @@ class CrossSectionMap extends Component {
       let tempIndex = 0;
       tempIndex = counts.indexOf(output);
       if (this.state.isFlipOption) {
-        let pivot = tempIndex;
-        let num_of_swaps;
-        if (average.length % 2 == 0) {
-          num_of_swaps = Math.floor(average.length / 2) - 1;
-        } else {
-          num_of_swaps = Math.floor(average.length / 2);
-        }
-        let tempData = Array.from(average);
-        let tempData1 = Array.from(transducerWallData);
-        for (let i = 0; i < num_of_swaps; i++) {
-          let start = pivot - 1 - i;
-          let end = pivot + 1 + i;
-          if (end > average.length - 1) {
-            end = end - average.length;
+        average.forEach((element) => {
+          let x = 360 - parseInt(element.angle);
+          let y = Math.round(x / 10) * 10;
+          if (y >= 360) {
+            element.angle = parseInt(y) - 360;
+          } else {
+            element.angle = parseInt(y);
           }
-          if (start < 0) {
-            start = average.length + start;
-          }
-          tempData[start] = average[end];
-          tempData[end] = average[start];
-          tempData1[start] = transducerWallData[end];
-          tempData1[end] = transducerWallData[start];
-        }
-        average = tempData;
-        transducerWallData = tempData1;
+        });
       }
+      // if (this.state.isFlipOption) {
+      //   let pivot = tempIndex;
+      //   let num_of_swaps;
+      //   if (average.length % 2 == 0) {
+      //     num_of_swaps = Math.floor(average.length / 2) - 1;
+      //   } else {
+      //     num_of_swaps = Math.floor(average.length / 2);
+      //   }
+      //   let tempData = Array.from(average);
+      //   let tempData1 = Array.from(transducerWallData);
+      //   for (let i = 0; i < num_of_swaps; i++) {
+      //     let start = pivot - 1 - i;
+      //     let end = pivot + 1 + i;
+      //     if (end > average.length - 1) {
+      //       end = end - average.length;
+      //     }
+      //     if (start < 0) {
+      //       start = average.length + start;
+      //     }
+      //     tempData[start] = average[end];
+      //     tempData[end] = average[start];
+      //     tempData1[start] = transducerWallData[end];
+      //     tempData1[end] = transducerWallData[start];
+      //   }
+      //   average = tempData;
+      //   transducerWallData = tempData1;
+      // }
       this.setState({ lablesArray: average });
       this.setState({ lablesArraySubValue: transducerWallData });
       this.getTempRadiusFromSimulator(wallData);
@@ -613,16 +632,30 @@ class CrossSectionMap extends Component {
   };
   changeTwistAngleValue = (event) => {
     if (
-      Number(event.target.value) >= 0 &&
+      Number(event.target.value) >= -360 &&
       Number(event.target.value) <= 360 &&
       event.target.value
     ) {
       this.setState({
         twistAngleValue: event.target.value,
       });
+      if (event.target.value % 10 == 0) {
+        this.setState({
+          twistAngleValueTemp: event.target.value,
+        });
+      }
     } else {
+      if (event.target.value < -360 || event.target.value > 360) {
+        this.setState({
+          twistAngleValue: 0,
+        });
+      } else {
+        this.setState({
+          twistAngleValue: null,
+        });
+      }
       this.setState({
-        twistAngleValue: 0,
+        twistAngleValueTemp: 0,
       });
     }
   };
@@ -710,7 +743,7 @@ class CrossSectionMap extends Component {
                         className="py-1 buttonClassCss crossSectionButton"
                         onClick={() => this.handleZoonInOption()}
                       >
-                        <img className="my-2 imageCssClass" src={IconZoomIn} />
+                        <img className="my-2 imageCssClassZoom" src={IconZoomIn} />
                       </div>
                       <div className="mt-3 mb-1 crossSectionButtonHeading">
                         ZoomOut
@@ -719,7 +752,13 @@ class CrossSectionMap extends Component {
                         className="py-1 buttonClassCss crossSectionButton"
                         onClick={() => this.handleZoomOutOption()}
                       >
-                        <img className="my-2 imageCssClass" src={IconZoomOut} />
+                        <img className="my-2 imageCssClassZoom" src={IconZoomOut} />
+                      </div>
+                      <div className="mt-3 mb-1 crossSectionButtonHeading">
+                        Zoom Level
+                      </div>
+                      <div className="py-2 buttonClassCss crossSectionButton">
+                        <span>{this.state.isZoomCount}x</span>
                       </div>
                     </div>
                   )}
@@ -822,7 +861,7 @@ class CrossSectionMap extends Component {
                           onClick={() => this.handleZoonInOption()}
                         >
                           <img
-                            className="my-2 imageCssClass"
+                            className="my-2 imageCssClassZoom"
                             src={IconZoomIn}
                           />
                         </div>
@@ -834,9 +873,15 @@ class CrossSectionMap extends Component {
                           onClick={() => this.handleZoomOutOption()}
                         >
                           <img
-                            className="my-2 imageCssClass"
+                            className="my-2 imageCssClassZoom"
                             src={IconZoomOut}
                           />
+                        </div>
+                        <div className="mt-3 mb-1 crossSectionButtonHeading">
+                          Zoom Level
+                        </div>
+                        <div className="py-2 buttonClassCss crossSectionButton">
+                          <span>{this.state.isZoomCount}x</span>
                         </div>
                       </div>
                     )}
@@ -972,7 +1017,7 @@ class CrossSectionMap extends Component {
                           onClick={() => this.handleZoonInOption()}
                         >
                           <img
-                            className="my-2 imageCssClass"
+                            className="my-2 imageCssClassZoom"
                             src={IconZoomIn}
                           />
                         </div>
@@ -984,9 +1029,15 @@ class CrossSectionMap extends Component {
                           onClick={() => this.handleZoomOutOption()}
                         >
                           <img
-                            className="my-2 imageCssClass"
+                            className="my-2 imageCssClassZoom"
                             src={IconZoomOut}
                           />
+                        </div>
+                        <div className="mt-3 mb-1 crossSectionButtonHeading">
+                          Zoom Level
+                        </div>
+                        <div className="py-2 buttonClassCss crossSectionButton">
+                          <span>{this.state.isZoomCount}x</span>
                         </div>
                       </div>
                     )}

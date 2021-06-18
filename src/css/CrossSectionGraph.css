@@ -47,22 +47,22 @@
 .crossSectionButton {
   width: 82px !important;
 }
-/* .twistAngleCss > input::-webkit-outer-spin-button,
-.twistAngleCss > input::-webkit-inner-spin-button {
+.twistAngleCss > div > input[type="number"]::-webkit-outer-spin-button,
+.twistAngleCss > div > input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.twistAngleCss > input[type="number"] {
+.twistAngleCss > div > input[type="number"] {
   -moz-appearance: textfield;
 }
-.twistAngleCss3D > input::-webkit-outer-spin-button,
-.twistAngleCss3D > input::-webkit-inner-spin-button {
+.twistAngleCss3D > div > input[type="number"]::-webkit-outer-spin-button,
+.twistAngleCss3D > div > input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.twistAngleCss3D > input[type="number"] {
+.twistAngleCss3D > div > input[type="number"] {
   -moz-appearance: textfield;
-} */
+}
 .crossSectionTabs > .nav-tabs {
   border: none !important;
   margin-bottom: 0px !important;
@@ -221,9 +221,15 @@
 .imageCssClass {
   width: 50%;
 }
+.imageCssClassZoom{
+  width: 34%;
+}
 @media only screen and (min-width: 1440px) {
   .imageCssClass {
     width: 50%;
+  }
+  .imageCssClassZoom{
+    width: 34%;
   }
   .FilterCheckBox2D {
     height: auto;
