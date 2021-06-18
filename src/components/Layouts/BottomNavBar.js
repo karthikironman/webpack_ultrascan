@@ -66,7 +66,7 @@ class bottomNav extends React.Component {
         <BottomButton image={icon1} route={"/heatmap"} />
         <BottomButton  image={iconReel} route={"null"}  callBackBottomNavBar={this.updateReelNumber}  callback={true}/>
         <BottomButton image={iconPlay} route={"null"} active={this.props.cross_section_graph} callBackBottomNavBar={this.startSimulation} callback={true}/>
-        <BottomButton image={iconStop} route={"null"} active={!this.props.cross_section_graph} callBackBottomNavBar={this.stopSimulation} callback={true}/>
+        <BottomButton classNames={"iconStop"} image={iconStop} route={"null"} active={!this.props.cross_section_graph} callBackBottomNavBar={this.stopSimulation} callback={true}/>
         {/* <BottomButton image={icon1} route={'/three'}/> */}
         {this.state.isFullscreen === true ? (
           <BottomButton

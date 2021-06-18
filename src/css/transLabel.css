@@ -1,18 +1,18 @@
-.trans-label-wrapper{
-    cursor: pointer;
-    font-size:14px;
+.trans-label-wrapper {
+  cursor: pointer;
+  font-size: 1.2vw;
 }
-.trans-label-average-box{
+.trans-label-average-box {
 }
-.trans-label-expandable{
-    height:auto;
+.trans-label-expandable {
+  height: auto;
 }
-.pin-icon-wrapper img{
-    width:2rem;
-    position:absolute;
-    right:-10px;
-    top:-10px;
+.pin-icon-wrapper img {
+  width: 2rem;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
-.hightlighted{
-    background-color: grey;
+.hightlighted {
+  background-color: grey;
 }

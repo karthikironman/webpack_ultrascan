@@ -35,7 +35,7 @@ class BottomButton extends React.Component {
     render() {
         return (
         <div id="bottomButton" className={this.props.bg ?"grey": this.getBg()} onClick={() => this.handleEvent(this.props.route,this.props.callback,this.props.fullScreenMode)}>
-            <img src={this.props.image} />
+            <img className={this.props.classNames} src={this.props.image} />
            {!this.props.noLine &&   <div className="sideLine"></div>} 
          
         </div>)

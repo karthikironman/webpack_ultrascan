@@ -10,7 +10,14 @@ position: relative;
     background-color: black;
 }
 #bottomButton img {
-    height:2.3rem;
+    height:2.3rem !important;
+    width: 2.3rem !important;
+}
+#bottomButton .iconStop {
+    height: 1.9rem !important;
+    width: 1.9rem !important;
+    padding-top: 0.2rem !important;
+    margin-top: 0.2rem !important;
 }
 .grey{
     background-color: grey  !important;
